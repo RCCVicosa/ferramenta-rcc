@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ferramenta de consulta para gerenciamento de resíduos da construção civil em Viçosa/MG.">
+  <title>Gestão de RCC — Viçosa/MG</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" data-route="inicio" aria-label="Ir para a página inicial">
+      <span class="brand-mark" aria-hidden="true">RCC</span>
+      <span>Gestão de Resíduos — Viçosa/MG</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
+    <nav id="mainNav" class="nav" aria-label="Navegação principal">
+      <a href="#sobre" data-route="sobre">Sobre a ferramenta</a>
+      <a href="#como-usar" data-route="como-usar">Como usar</a>
+      <a href="#referencias" data-route="referencias">Referências</a>
+      <a href="#contato" data-route="contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1">
+    <section class="page active" data-page="inicio">
+      <div class="hero container">
+        <span class="eyebrow">Aplicação-piloto acadêmica</span>
+        <h1>Gerenciamento de Resíduos da Construção Civil</h1>
+        <p class="lead">Ferramenta de consulta para relacionar etapas da obra, resíduos previstos, classificação, orientações de gerenciamento e alternativas de destinação em Viçosa/MG.</p>
+        <div class="pilot-card">
+          <strong>Aplicação-piloto</strong>
+          <span>Revitalização da Praça do Laranjal — Viçosa/MG</span>
+        </div>
+
+        <div class="notice" role="status">
+          <strong>Versão de demonstração.</strong> A estrutura de navegação já está funcional, mas os dados exibidos abaixo são provisórios e serão substituídos pela base consolidada do projeto.
+        </div>
+
+        <h2>Como você deseja consultar?</h2>
+        <div class="choice-grid">
+          <button class="choice-card" data-route="etapas">
+            <span class="choice-number">01</span>
+            <strong>Consultar por etapa da obra</strong>
+            <span>Selecione uma etapa ou atividade e veja os resíduos associados.</span>
+          </button>
+          <button class="choice-card" data-route="residuos">
+            <span class="choice-number">02</span>
+            <strong>Consultar por tipo de resíduo</strong>
+            <span>Pesquise diretamente um material e acesse sua ficha.</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" data-page="etapas">
+      <div class="container page-header">
+        <button class="back-link" data-route="inicio">← Voltar ao início</button>
+        <span class="eyebrow">Consulta 01</span>
+        <h1>Consulta por etapa da obra</h1>
+        <p>Selecione uma etapa para visualizar os resíduos potencialmente associados a ela.</p>
+      </div>
+      <div class="container">
+        <div id="stageGrid" class="stage-grid"></div>
+        <div id="stageResults" class="results-panel hidden" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="page" data-page="residuos">
+      <div class="container page-header">
+        <button class="back-link" data-route="inicio">← Voltar ao início</button>
+        <span class="eyebrow">Consulta 02</span>
+        <h1>Consulta por tipo de resíduo</h1>
+        <p>Digite o nome do material ou navegue pela lista de resíduos cadastrados.</p>
+      </div>
+      <div class="container">
+        <label class="search-box" for="residueSearch">
+          <span>Pesquisar resíduo</span>
+          <input id="residueSearch" type="search" placeholder="Ex.: concreto, madeira, plástico..." autocomplete="off">
+        </label>
+        <div id="residueList" class="residue-list" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="page" data-page="ficha">
+      <div class="container page-header">
+        <button class="back-link" id="backFromSheet">← Voltar</button>
+        <span class="eyebrow">Ficha do resíduo</span>
+      </div>
+      <article id="residueSheet" class="container residue-sheet"></article>
+    </section>
+
+    <section class="page" data-page="sobre">
+      <div class="container text-page">
+        <button class="back-link" data-route="inicio">← Voltar ao início</button>
+        <h1>Sobre a ferramenta</h1>
+        <p>Esta ferramenta foi desenvolvida como produto acadêmico para organizar informações relacionadas ao gerenciamento de resíduos da construção civil em obras no município de Viçosa/MG. A Praça do Laranjal é utilizada como primeira aplicação da estrutura.</p>
+        <p>O conteúdo será ampliado à medida que a base técnica do projeto for consolidada.</p>
+      </div>
+    </section>
+
+    <section class="page" data-page="como-usar">
+      <div class="container text-page">
+        <button class="back-link" data-route="inicio">← Voltar ao início</button>
+        <h1>Como usar</h1>
+        <ol class="steps">
+          <li>Escolha consultar por etapa da obra ou por tipo de resíduo.</li>
+          <li>Selecione a etapa ou pesquise o resíduo desejado.</li>
+          <li>Acesse a ficha única do resíduo.</li>
+          <li>Consulte classificação, manejo, destinação, fontes e status da informação.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="page" data-page="referencias">
+      <div class="container text-page">
+        <button class="back-link" data-route="inicio">← Voltar ao início</button>
+        <h1>Referências</h1>
+        <p>As referências técnicas, legais e bibliográficas serão vinculadas aos registros da base consolidada. Nesta versão de demonstração, são exibidas apenas referências ilustrativas já utilizadas no projeto.</p>
+        <ul class="reference-list">
+          <li>Resolução CONAMA nº 307/2002 e alterações.</li>
+          <li>Lei Federal nº 12.305/2010 — Política Nacional de Resíduos Sólidos.</li>
+          <li>Normas técnicas da ABNT aplicáveis ao gerenciamento e à classificação dos resíduos.</li>
+          <li>Normas e informações oficiais aplicáveis ao município de Viçosa/MG e ao Estado de Minas Gerais.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="page" data-page="contato">
+      <div class="container text-page">
+        <button class="back-link" data-route="inicio">← Voltar ao início</button>
+        <h1>Contato</h1>
+        <p>Projeto acadêmico desenvolvido na disciplina EXT009 — Tratamento e Gerenciamento de Resíduos Sólidos.</p>
+        <p><strong>Equipe:</strong> Ana Paula Dutra Machado, Lisandra Oliveira Vieira e Ricky Alves Costa Andrade.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <span>Projeto acadêmico • Viçosa/MG</span>
+      <span id="dataStatus">Carregando base de dados...</span>
+    </div>
+  </footer>
+
+  <script src="data-fallback.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
