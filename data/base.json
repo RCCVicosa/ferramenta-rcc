@@ -1,68 +1,114 @@
 {
   "meta": {
-    "versao": "protótipo 0.2",
+    "versao": "Versão de desenvolvimento 0.4",
     "atualizacao": "27/10/2026",
     "aviso": "Dados de demonstração. Substituir pela matriz consolidada do projeto."
   },
   "etapas": [
-    {"id":"E01","nome":"Demolições e retiradas","descricao":"Exemplo provisório para teste do fluxo de consulta."},
-    {"id":"E02","nome":"Movimentação de terra","descricao":"Exemplo provisório para teste do fluxo de consulta."},
-    {"id":"E03","nome":"Pavimentação","descricao":"Exemplo provisório para teste do fluxo de consulta."},
-    {"id":"E04","nome":"Acabamentos e pintura","descricao":"Exemplo provisório para teste do fluxo de consulta."},
-    {"id":"E05","nome":"Paisagismo","descricao":"Exemplo provisório para teste do fluxo de consulta."}
+    {
+      "id": "E01",
+      "nome": "Demolições e retiradas",
+      "descricao": "Exemplo provisório para teste do fluxo de consulta."
+    },
+    {
+      "id": "E02",
+      "nome": "Movimentação de terra",
+      "descricao": "Exemplo provisório para teste do fluxo de consulta."
+    },
+    {
+      "id": "E03",
+      "nome": "Pavimentação",
+      "descricao": "Exemplo provisório para teste do fluxo de consulta."
+    },
+    {
+      "id": "E04",
+      "nome": "Acabamentos e pintura",
+      "descricao": "Exemplo provisório para teste do fluxo de consulta."
+    },
+    {
+      "id": "E05",
+      "nome": "Paisagismo",
+      "descricao": "Exemplo provisório para teste do fluxo de consulta."
+    }
   ],
   "residuos": [
     {
-      "id":"R001","nome":"Concreto e argamassa","classe":"A","status":"pendente","etapas":["E01","E03"],
-      "origem":"Demolições, retiradas ou sobras de execução, conforme a atividade confirmada na aplicação-piloto.",
-      "segregacao":"Manter separado de materiais recicláveis e de resíduos perigosos.",
-      "acondicionamento":"Baias, caçambas ou área delimitada compatível com o volume gerado.",
-      "armazenamento":"Área organizada, sem obstrução da circulação e protegida contra dispersão.",
-      "transporte":"Utilizar equipamento compatível e confirmar previamente o destino receptor.",
-      "reutilizacao":"Avaliar reaproveitamento ou reciclagem como agregado quando tecnicamente aplicável.",
-      "destinacao":"Alternativa de reciclagem ou destinação regularizada compatível com resíduo Classe A.",
-      "alternativaLocal":"A confirmar no levantamento de Viçosa/MG.",
-      "fonte":"Exemplo baseado na estrutura metodológica do projeto; confirmar na base técnica.",
-      "verificacao":"Pendente"
+      "id": "R001",
+      "nome": "Concreto e argamassa",
+      "classe": "A",
+      "status": "pendente",
+      "etapas": [
+        "E01",
+        "E03"
+      ],
+      "origem": "Demolições, retiradas ou sobras de execução, conforme a atividade confirmada na aplicação-piloto.",
+      "segregacao": "Manter separado de materiais recicláveis e de resíduos perigosos.",
+      "acondicionamento": "Baias, caçambas ou área delimitada compatível com o volume gerado.",
+      "armazenamento": "Área organizada, sem obstrução da circulação e protegida contra dispersão.",
+      "transporte": "Utilizar equipamento compatível e confirmar previamente o destino receptor.",
+      "reutilizacao": "Avaliar reaproveitamento ou reciclagem como agregado quando tecnicamente aplicável.",
+      "destinacao": "Alternativa de reciclagem ou destinação regularizada compatível com resíduo Classe A.",
+      "alternativaLocal": "A confirmar no levantamento de Viçosa/MG.",
+      "fonte": "Exemplo baseado na estrutura metodológica do projeto; confirmar na base técnica.",
+      "verificacao": "Pendente"
     },
     {
-      "id":"R002","nome":"Madeira","classe":"B","status":"pendente","etapas":["E01","E03"],
-      "origem":"Peças, embalagens ou elementos provisórios, caso identificados nas atividades da obra.",
-      "segregacao":"Separar de resíduos minerais e evitar contaminação.",
-      "acondicionamento":"Empilhamento ou recipiente/área específica, de forma segura.",
-      "armazenamento":"Manter em local organizado e, quando necessário, protegido de umidade e contaminação.",
-      "transporte":"Encaminhar a receptor compatível com o tipo e a condição da madeira.",
-      "reutilizacao":"Priorizar reutilização de peças em boas condições e reciclagem quando disponível.",
-      "destinacao":"Reutilização, reciclagem ou outro destino compatível e regularizado.",
-      "alternativaLocal":"A confirmar no levantamento de Viçosa/MG.",
-      "fonte":"Exemplo de demonstração.",
-      "verificacao":"Pendente"
+      "id": "R002",
+      "nome": "Madeira",
+      "classe": "B",
+      "status": "pendente",
+      "etapas": [
+        "E01",
+        "E03"
+      ],
+      "origem": "Peças, embalagens ou elementos provisórios, caso identificados nas atividades da obra.",
+      "segregacao": "Separar de resíduos minerais e evitar contaminação.",
+      "acondicionamento": "Empilhamento ou recipiente/área específica, de forma segura.",
+      "armazenamento": "Manter em local organizado e, quando necessário, protegido de umidade e contaminação.",
+      "transporte": "Encaminhar a receptor compatível com o tipo e a condição da madeira.",
+      "reutilizacao": "Priorizar reutilização de peças em boas condições e reciclagem quando disponível.",
+      "destinacao": "Reutilização, reciclagem ou outro destino compatível e regularizado.",
+      "alternativaLocal": "A confirmar no levantamento de Viçosa/MG.",
+      "fonte": "Exemplo de demonstração.",
+      "verificacao": "Pendente"
     },
     {
-      "id":"R003","nome":"Embalagens de tinta","classe":"B/D","status":"pendente","etapas":["E04"],
-      "origem":"Serviços de pintura, quando previstos na aplicação-piloto.",
-      "segregacao":"Manter separadas e avaliar a presença de produto residual.",
-      "acondicionamento":"Recipientes íntegros, identificados e protegidos contra vazamentos quando houver conteúdo residual.",
-      "armazenamento":"Área protegida e separada dos demais resíduos.",
-      "transporte":"Conforme condição da embalagem e exigências aplicáveis ao material residual.",
-      "reutilizacao":"Depende da condição da embalagem e das alternativas de logística/reaproveitamento disponíveis.",
-      "destinacao":"Definir após confirmar condição do resíduo e alternativa compatível.",
-      "alternativaLocal":"Não confirmada nesta versão.",
-      "fonte":"Exemplo de demonstração; requer verificação legal e local.",
-      "verificacao":"Pendente"
+      "id": "R003",
+      "nome": "Embalagens de tinta",
+      "classe": "B/D",
+      "status": "pendente",
+      "etapas": [
+        "E04"
+      ],
+      "origem": "Serviços de pintura, quando previstos na aplicação-piloto.",
+      "segregacao": "Manter separadas e avaliar a presença de produto residual.",
+      "acondicionamento": "Recipientes íntegros, identificados e protegidos contra vazamentos quando houver conteúdo residual.",
+      "armazenamento": "Área protegida e separada dos demais resíduos.",
+      "transporte": "Conforme condição da embalagem e exigências aplicáveis ao material residual.",
+      "reutilizacao": "Depende da condição da embalagem e das alternativas de logística/reaproveitamento disponíveis.",
+      "destinacao": "Definir após confirmar condição do resíduo e alternativa compatível.",
+      "alternativaLocal": "Não confirmada nesta versão.",
+      "fonte": "Exemplo de demonstração; requer verificação legal e local.",
+      "verificacao": "Pendente"
     },
     {
-      "id":"R004","nome":"Resíduos vegetais","classe":"Fora das classes RCC A-D","status":"lacuna","etapas":["E05"],
-      "origem":"Poda, retirada de vegetação e manutenção paisagística, quando aplicáveis.",
-      "segregacao":"Manter separado de entulho mineral, recicláveis e materiais contaminados.",
-      "acondicionamento":"Área ou recipiente compatível com o material vegetal.",
-      "armazenamento":"Evitar dispersão e obstrução de circulação e drenagem.",
-      "transporte":"Conforme serviço de coleta ou alternativa de aproveitamento identificada.",
-      "reutilizacao":"Avaliar compostagem ou aproveitamento de matéria orgânica quando tecnicamente viável.",
-      "destinacao":"Depende da alternativa local identificada.",
-      "alternativaLocal":"Lacuna a ser investigada no levantamento municipal.",
-      "fonte":"Exemplo de demonstração.",
-      "verificacao":"Não confirmada"
+      "id": "R004",
+      "nome": "Resíduos vegetais",
+      "classe": "Fora das classes RCC A-D",
+      "status": "lacuna",
+      "etapas": [
+        "E05"
+      ],
+      "origem": "Poda, retirada de vegetação e manutenção paisagística, quando aplicáveis.",
+      "segregacao": "Manter separado de entulho mineral, recicláveis e materiais contaminados.",
+      "acondicionamento": "Área ou recipiente compatível com o material vegetal.",
+      "armazenamento": "Evitar dispersão e obstrução de circulação e drenagem.",
+      "transporte": "Conforme serviço de coleta ou alternativa de aproveitamento identificada.",
+      "reutilizacao": "Avaliar compostagem ou aproveitamento de matéria orgânica quando tecnicamente viável.",
+      "destinacao": "Depende da alternativa local identificada.",
+      "alternativaLocal": "Lacuna a ser investigada no levantamento municipal.",
+      "fonte": "Exemplo de demonstração.",
+      "verificacao": "Não confirmada"
     }
   ]
 }

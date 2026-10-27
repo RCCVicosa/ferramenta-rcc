@@ -1,26 +1,17 @@
-FERRAMENTA RCC — VIÇOSA/MG
-Protótipo funcional para GitHub Pages
+PROTÓTIPO FUNCIONAL — FERRAMENTA RCC VIÇOSA
 
-ARQUIVOS PRINCIPAIS
-- index.html: estrutura das páginas e navegação.
-- styles.css: identidade visual, responsividade e modos de acessibilidade.
-- app.js: navegação, pesquisa, filtros, ficha dinâmica, leitura em voz alta e controles de acessibilidade.
-- data/base.json: base que alimenta etapas e resíduos.
-- data-fallback.js: cópia de segurança para abrir o protótipo localmente.
-- assets/botanica.svg e assets/folhas-projeto.svg: ilustrações vetoriais próprias, sem dependência de imagens externas.
+Versão visual 0.4 — 27/10/2026
 
-ACESSIBILIDADE
-- navegação por teclado e foco visível;
-- link "Ir para o conteúdo principal";
-- aumento/redução de fonte;
-- modo de fonte legível;
-- alto contraste;
-- modo escuro;
-- leitura em voz alta pelo navegador;
-- estrutura preparada para inclusão posterior de recurso de Libras, a ser integrado e testado em etapa específica de acessibilidade.
+Arquivos principais:
+- index.html: estrutura das páginas
+- styles.css: aparência e responsividade
+- app.js: navegação, pesquisa, acessibilidade e leitura da base
+- data/base.json: base de dados do protótipo
+- assets/hero-bg.jpg: fundo da página inicial
+- assets/icons/*.png: ícones em alta resolução usados na interface
 
-IMPORTANTE
-Os dados atuais são de demonstração e devem ser substituídos pela matriz consolidada do projeto. A estrutura foi preparada para que a interface continue a mesma enquanto o arquivo data/base.json é atualizado.
+A página inicial foi redesenhada a partir do layout aprovado pelo grupo.
+Os ícones são arquivos PNG transparentes em alta resolução para evitar falhas de renderização.
+O fundo principal é um arquivo próprio e não depende de imagens externas.
 
-PUBLICAÇÃO
-No GitHub Pages, manter index.html, styles.css, app.js, data-fallback.js, README.txt, a pasta data e a pasta assets na raiz do repositório.
+Os dados atuais continuam provisórios e servem para testar o funcionamento da ferramenta.
