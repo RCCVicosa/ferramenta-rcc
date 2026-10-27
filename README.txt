@@ -17,7 +17,7 @@ ACESSIBILIDADE
 - alto contraste;
 - modo escuro;
 - leitura em voz alta pelo navegador;
-- integração com o VLibras por meio do widget oficial do Governo Federal.
+- estrutura preparada para inclusão posterior de recurso de Libras, a ser integrado e testado em etapa específica de acessibilidade.
 
 IMPORTANTE
 Os dados atuais são de demonstração e devem ser substituídos pela matriz consolidada do projeto. A estrutura foi preparada para que a interface continue a mesma enquanto o arquivo data/base.json é atualizado.

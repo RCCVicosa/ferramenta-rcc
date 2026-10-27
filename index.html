@@ -35,7 +35,6 @@
         </button>
         <div class="accessibility-wrap">
           <button class="accessibility-button" id="accessibilityToggle" aria-expanded="false" aria-controls="accessibilityPanel">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.8" r="2"/><path d="M5 8.4h14M12 8.7v10.5M8.2 21l3.8-6 3.8 6M8.4 9.2l-2 6M15.6 9.2l2 6"/></svg>
             <span>Acessibilidade</span>
             <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 9 5 5 5-5"/></svg>
           </button>
@@ -45,7 +44,6 @@
             <button type="button" data-access="readable"><span class="acc-icon">Aa</span><span>Fonte legível</span></button>
             <button type="button" data-access="contrast"><span class="acc-icon">◐</span><span>Alto contraste</span></button>
             <button type="button" data-access="dark"><span class="acc-icon">◒</span><span>Modo escuro</span></button>
-            <button type="button" data-access="libras"><span class="acc-icon">🤟</span><span>Libras</span></button>
             <button type="button" data-access="speak"><span class="acc-icon">🔊</span><span>Leitura em voz alta</span></button>
             <button type="button" data-access="stop-speak"><span class="acc-icon">■</span><span>Parar leitura</span></button>
           </div>
@@ -57,21 +55,20 @@
   <main id="app" tabindex="-1">
     <section class="page active" data-page="inicio" aria-labelledby="homeTitle">
       <div class="home-hero">
-        <img src="assets/botanica.svg" class="hero-botanica" alt="" aria-hidden="true">
         <div class="hero-content container-wide">
           <h1 id="homeTitle">Gerenciamento de resíduos da construção civil em <span>Viçosa, MG</span></h1>
           <p class="hero-lead">Aqui você encontra informações sobre classificação, segregação, armazenamento, transporte, reutilização, reciclagem e destinação adequada dos resíduos.</p>
           <div class="hero-actions" aria-label="Formas de consulta">
             <button class="hero-action" data-route="etapas">
               <span class="hero-action-icon" aria-hidden="true">
-                <svg viewBox="0 0 64 64"><path d="M11 37h18v16H11zM35 31h18v22H35zM23 13h18v16H23zM6 32l14-8v8zM29 26l14-8v8z"/></svg>
+                <svg viewBox="0 0 64 64"><rect x="10" y="38" width="18" height="14" rx="2"/><rect x="36" y="38" width="18" height="14" rx="2"/><rect x="23" y="17" width="18" height="14" rx="2"/><path d="M19 38v-7h26v7M32 31v7"/></svg>
               </span>
               <span class="hero-action-copy"><strong>Consultar por etapa</strong><small>Veja os resíduos gerados em cada etapa da obra e as orientações de gerenciamento.</small></span>
               <span class="hero-action-arrow" aria-hidden="true">›</span>
             </button>
             <button class="hero-action" data-route="residuos">
               <span class="hero-action-icon" aria-hidden="true">
-                <svg viewBox="0 0 64 64"><path d="M29 8 20 23h9l-6 10-9-16L25 8zM44 26l10 17H43l5 9H29l8-14h8l-5-9zM22 52H9l7-12-5-9h18l5 8-6 10h-9z"/></svg>
+                <svg viewBox="0 0 64 64"><path d="M24 14h12l6 10"/><path d="m37 18 5 6 6-5"/><path d="M48 35l-6 10H30"/><path d="m37 45-7 0 3 8"/><path d="M19 44l-6-10 6-10"/><path d="m13 32 6-8 7 4"/></svg>
               </span>
               <span class="hero-action-copy"><strong>Consultar por resíduo</strong><small>Busque um resíduo específico e veja como gerenciá-lo e quais alternativas estão cadastradas.</small></span>
               <span class="hero-action-arrow" aria-hidden="true">›</span>
@@ -161,20 +158,6 @@
 
   <script src="data-fallback.js"></script>
   <script src="app.js"></script>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    window.addEventListener('load', function () {
-      if (window.VLibras && window.VLibras.Widget) {
-        try {
-          new window.VLibras.Widget({
-            rootPath: 'https://vlibras.gov.br/app',
-            personalization: 'https://vlibras.gov.br/config/default_logo.json',
-            avatar: 'random',
-            position: 'L'
-          });
-        } catch (e) { /* O site continua funcional mesmo se o serviço externo estiver indisponível. */ }
-      }
-    });
-  </script>
+
 </body>
 </html>

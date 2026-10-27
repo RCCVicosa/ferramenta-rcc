@@ -88,11 +88,6 @@
     }
     if (action === 'speak') speakCurrentPage();
     if (action === 'stop-speak') window.speechSynthesis?.cancel();
-    if (action === 'libras'){
-      const btnVlibras = window.VLibrasWidget?.initBtn;
-      if (btnVlibras && typeof btnVlibras.click === 'function') btnVlibras.click();
-      else showToast('O VLibras ainda está carregando. Tente novamente em alguns segundos.');
-    }
   }));
 
   function speakCurrentPage(){
