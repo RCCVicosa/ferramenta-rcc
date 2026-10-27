@@ -1,24 +1,26 @@
-PROTÓTIPO — FERRAMENTA DE CONSULTA PARA GERENCIAMENTO DE RCC
+FERRAMENTA RCC — VIÇOSA/MG
+Protótipo funcional para GitHub Pages
 
-Arquivos principais:
-- index.html: estrutura das páginas/telas.
-- styles.css: aparência e responsividade.
-- app.js: navegação, busca, filtros e montagem das fichas.
-- data/base.json: base estruturada que alimenta o site.
-- data-fallback.js: cópia temporária da base para permitir abrir o protótipo localmente por duplo clique.
+ARQUIVOS PRINCIPAIS
+- index.html: estrutura das páginas e navegação.
+- styles.css: identidade visual, responsividade e modos de acessibilidade.
+- app.js: navegação, pesquisa, filtros, ficha dinâmica, leitura em voz alta e controles de acessibilidade.
+- data/base.json: base que alimenta etapas e resíduos.
+- data-fallback.js: cópia de segurança para abrir o protótipo localmente.
+- assets/botanica.svg e assets/folhas-projeto.svg: ilustrações vetoriais próprias, sem dependência de imagens externas.
 
-COMO TESTAR AGORA
-1. Abra index.html no navegador.
-2. Teste "Consultar por etapa da obra".
-3. Teste "Consultar por tipo de resíduo" e use a busca.
-4. Abra uma ficha de resíduo.
+ACESSIBILIDADE
+- navegação por teclado e foco visível;
+- link "Ir para o conteúdo principal";
+- aumento/redução de fonte;
+- modo de fonte legível;
+- alto contraste;
+- modo escuro;
+- leitura em voz alta pelo navegador;
+- integração com o VLibras por meio do widget oficial do Governo Federal.
 
-COMO A BASE FOI PENSADA
-- etapas: corresponde às etapas/atividades levantadas no item 5.1.
-- residuos: classificação e procedimentos de gerenciamento do item 5.2.
-- destinos: alternativas locais/regionais confirmadas ou lacunas identificadas.
-
-Os dados atuais são apenas provisórios para demonstrar o funcionamento da ferramenta. Devem ser substituídos pela matriz consolidada do projeto.
+IMPORTANTE
+Os dados atuais são de demonstração e devem ser substituídos pela matriz consolidada do projeto. A estrutura foi preparada para que a interface continue a mesma enquanto o arquivo data/base.json é atualizado.
 
 PUBLICAÇÃO
-A estrutura é compatível com hospedagem estática, como GitHub Pages. Quando o repositório for criado, os arquivos podem ser publicados diretamente.
+No GitHub Pages, manter index.html, styles.css, app.js, data-fallback.js, README.txt, a pasta data e a pasta assets na raiz do repositório.

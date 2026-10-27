@@ -4,146 +4,177 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Ferramenta de consulta para gerenciamento de resíduos da construção civil em Viçosa/MG.">
-  <title>Gestão de RCC — Viçosa/MG</title>
+  <meta name="theme-color" content="#0f4a2d">
+  <title>Gerenciamento de RCC — Viçosa/MG</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#inicio" data-route="inicio" aria-label="Ir para a página inicial">
-      <span class="brand-mark" aria-hidden="true">RCC</span>
-      <span>Gestão de Resíduos — Viçosa/MG</span>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
-    <nav id="mainNav" class="nav" aria-label="Navegação principal">
-      <a href="#sobre" data-route="sobre">Sobre a ferramenta</a>
-      <a href="#como-usar" data-route="como-usar">Como usar</a>
-      <a href="#referencias" data-route="referencias">Referências</a>
-      <a href="#contato" data-route="contato">Contato</a>
-    </nav>
+  <a class="skip-link" href="#app">Ir para o conteúdo principal</a>
+
+  <header class="topbar" id="topo">
+    <div class="topbar-inner">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu de navegação">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <nav id="mainNav" class="nav" aria-label="Navegação principal">
+        <a href="#inicio" data-route="inicio" class="nav-home" aria-label="Ir para o início">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5v8a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+          <span>Início</span>
+        </a>
+        <a href="#gestao" data-route="gestao">Gestão de resíduos RCC</a>
+        <a href="#sobre" data-route="sobre">Sobre a ferramenta</a>
+        <a href="#como-usar" data-route="como-usar">Como usar</a>
+        <a href="#referencias" data-route="referencias">Referências</a>
+        <a href="#contato" data-route="contato">Contato</a>
+      </nav>
+
+      <div class="top-actions">
+        <button class="icon-button" id="globalSearchBtn" aria-label="Abrir consulta por resíduo" title="Pesquisar resíduo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+        </button>
+        <div class="accessibility-wrap">
+          <button class="accessibility-button" id="accessibilityToggle" aria-expanded="false" aria-controls="accessibilityPanel">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.8" r="2"/><path d="M5 8.4h14M12 8.7v10.5M8.2 21l3.8-6 3.8 6M8.4 9.2l-2 6M15.6 9.2l2 6"/></svg>
+            <span>Acessibilidade</span>
+            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 9 5 5 5-5"/></svg>
+          </button>
+          <div class="accessibility-panel" id="accessibilityPanel" hidden>
+            <button type="button" data-access="font-plus"><span class="acc-icon">A+</span><span>Aumentar fonte</span></button>
+            <button type="button" data-access="font-minus"><span class="acc-icon">A−</span><span>Diminuir fonte</span></button>
+            <button type="button" data-access="readable"><span class="acc-icon">Aa</span><span>Fonte legível</span></button>
+            <button type="button" data-access="contrast"><span class="acc-icon">◐</span><span>Alto contraste</span></button>
+            <button type="button" data-access="dark"><span class="acc-icon">◒</span><span>Modo escuro</span></button>
+            <button type="button" data-access="libras"><span class="acc-icon">🤟</span><span>Libras</span></button>
+            <button type="button" data-access="speak"><span class="acc-icon">🔊</span><span>Leitura em voz alta</span></button>
+            <button type="button" data-access="stop-speak"><span class="acc-icon">■</span><span>Parar leitura</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main id="app" tabindex="-1">
-    <section class="page active" data-page="inicio">
-      <div class="hero container">
-        <span class="eyebrow">Aplicação-piloto acadêmica</span>
-        <h1>Gerenciamento de Resíduos da Construção Civil</h1>
-        <p class="lead">Ferramenta de consulta para relacionar etapas da obra, resíduos previstos, classificação, orientações de gerenciamento e alternativas de destinação em Viçosa/MG.</p>
-        <div class="pilot-card">
-          <strong>Aplicação-piloto</strong>
-          <span>Revitalização da Praça do Laranjal — Viçosa/MG</span>
-        </div>
-
-        <div class="notice" role="status">
-          <strong>Versão de demonstração.</strong> A estrutura de navegação já está funcional, mas os dados exibidos abaixo são provisórios e serão substituídos pela base consolidada do projeto.
-        </div>
-
-        <h2>Como você deseja consultar?</h2>
-        <div class="choice-grid">
-          <button class="choice-card" data-route="etapas">
-            <span class="choice-number">01</span>
-            <strong>Consultar por etapa da obra</strong>
-            <span>Selecione uma etapa ou atividade e veja os resíduos associados.</span>
-          </button>
-          <button class="choice-card" data-route="residuos">
-            <span class="choice-number">02</span>
-            <strong>Consultar por tipo de resíduo</strong>
-            <span>Pesquise diretamente um material e acesse sua ficha.</span>
-          </button>
+    <section class="page active" data-page="inicio" aria-labelledby="homeTitle">
+      <div class="home-hero">
+        <img src="assets/botanica.svg" class="hero-botanica" alt="" aria-hidden="true">
+        <div class="hero-content container-wide">
+          <h1 id="homeTitle">Gerenciamento de resíduos da construção civil em <span>Viçosa, MG</span></h1>
+          <p class="hero-lead">Aqui você encontra informações sobre classificação, segregação, armazenamento, transporte, reutilização, reciclagem e destinação adequada dos resíduos.</p>
+          <div class="hero-actions" aria-label="Formas de consulta">
+            <button class="hero-action" data-route="etapas">
+              <span class="hero-action-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M11 37h18v16H11zM35 31h18v22H35zM23 13h18v16H23zM6 32l14-8v8zM29 26l14-8v8z"/></svg>
+              </span>
+              <span class="hero-action-copy"><strong>Consultar por etapa</strong><small>Veja os resíduos gerados em cada etapa da obra e as orientações de gerenciamento.</small></span>
+              <span class="hero-action-arrow" aria-hidden="true">›</span>
+            </button>
+            <button class="hero-action" data-route="residuos">
+              <span class="hero-action-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M29 8 20 23h9l-6 10-9-16L25 8zM44 26l10 17H43l5 9H29l8-14h8l-5-9zM22 52H9l7-12-5-9h18l5 8-6 10h-9z"/></svg>
+              </span>
+              <span class="hero-action-copy"><strong>Consultar por resíduo</strong><small>Busque um resíduo específico e veja como gerenciá-lo e quais alternativas estão cadastradas.</small></span>
+              <span class="hero-action-arrow" aria-hidden="true">›</span>
+            </button>
+          </div>
         </div>
       </div>
+
+      <section class="feature-strip" aria-label="Características da ferramenta">
+        <div class="container-wide feature-grid">
+          <article class="feature-item"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21c5-4 7-9 7-15-6 0-11 2-14 7 0 4 3 7 7 8zM7 17c3-3 6-5 10-7"/></svg></span><div><strong>Baseado em normas e referências técnicas</strong><p>Informações organizadas e atualizadas.</p></div></article>
+          <article class="feature-item"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-13a7 7 0 1 0-14 0c0 6.8 7 13 7 13z"/><circle cx="12" cy="9" r="2.4"/></svg></span><div><strong>Foco na realidade de Viçosa</strong><p>Inclui alternativas de destinação e reaproveitamento no município.</p></div></article>
+          <article class="feature-item"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 7h12M6 12h12M6 17h12M4 5v4M20 10v4M4 15v4"/></svg></span><div><strong>Aplicação em obras</strong><p>Orientações práticas para diferentes tipos de obra.</p></div></article>
+          <article class="feature-item"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></span><div><strong>Ferramenta em construção</strong><p>Em constante atualização com novas informações e contribuições.</p></div></article>
+        </div>
+      </section>
+
+      <section class="home-lower container-wide">
+        <article class="project-card">
+          <img src="assets/folhas-projeto.svg" alt="Ilustração botânica decorativa" class="project-art">
+          <div>
+            <h2>Sobre o projeto</h2>
+            <p>A ferramenta foi desenvolvida como parte de um projeto acadêmico para apoiar o gerenciamento de resíduos da construção civil (RCC), tendo como aplicação-piloto a Praça do Laranjal, em Viçosa/MG.</p>
+            <p>A estrutura foi planejada para permitir a inclusão futura de outras obras e novos registros.</p>
+            <button class="outline-button" data-route="sobre">Saiba mais <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <article class="audience-card">
+          <h2>Para quem é esta ferramenta?</h2>
+          <div class="audience-grid">
+            <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M5 18v-5h14v5M7 13V8a5 5 0 0 1 10 0v5M4 9h16"/></svg><span>Profissionais<br>da construção</span></div>
+            <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21h16M6 21V8h12v13M9 11h2M13 11h2M9 15h2M13 15h2M8 8V5h8v3"/></svg><span>Órgãos públicos</span></div>
+            <div><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20v-2a6 6 0 0 1 12 0v2M10 20v-2a6 6 0 0 1 12 0v2"/></svg><span>Estudantes<br>e pesquisadores</span></div>
+            <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c5-4 7-9 7-15-6 0-11 2-14 7 0 4 3 7 7 8zM7 17c3-3 6-5 10-7"/></svg><span>Comunidade<br>em geral</span></div>
+          </div>
+        </article>
+      </section>
     </section>
 
-    <section class="page" data-page="etapas">
-      <div class="container page-header">
-        <button class="back-link" data-route="inicio">← Voltar ao início</button>
-        <span class="eyebrow">Consulta 01</span>
-        <h1>Consulta por etapa da obra</h1>
-        <p>Selecione uma etapa para visualizar os resíduos potencialmente associados a ela.</p>
-      </div>
-      <div class="container">
-        <div id="stageGrid" class="stage-grid"></div>
-        <div id="stageResults" class="results-panel hidden" aria-live="polite"></div>
-      </div>
+    <section class="page" data-page="gestao" aria-labelledby="gestaoTitle">
+      <div class="subpage-hero"><div class="container"><button class="back-link" data-route="inicio">← Voltar ao início</button><span class="eyebrow">Conteúdo técnico</span><h1 id="gestaoTitle">Gestão de resíduos da construção civil</h1><p>Espaço destinado às informações gerais que contextualizam a classificação, o manejo e a destinação dos RCC.</p></div></div>
+      <div class="container content-card prose"><div class="status-note"><strong>Conteúdo em desenvolvimento.</strong> Esta página será enriquecida com o material técnico consolidado pelo grupo.</div><h2>O que você encontrará aqui</h2><p>Conceitos básicos, classes de resíduos, princípios de gerenciamento, referências legais e a relação entre as etapas da obra e os resíduos potencialmente gerados.</p></div>
     </section>
 
-    <section class="page" data-page="residuos">
-      <div class="container page-header">
-        <button class="back-link" data-route="inicio">← Voltar ao início</button>
-        <span class="eyebrow">Consulta 02</span>
-        <h1>Consulta por tipo de resíduo</h1>
-        <p>Digite o nome do material ou navegue pela lista de resíduos cadastrados.</p>
-      </div>
-      <div class="container">
-        <label class="search-box" for="residueSearch">
-          <span>Pesquisar resíduo</span>
-          <input id="residueSearch" type="search" placeholder="Ex.: concreto, madeira, plástico..." autocomplete="off">
-        </label>
-        <div id="residueList" class="residue-list" aria-live="polite"></div>
-      </div>
+    <section class="page" data-page="etapas" aria-labelledby="etapasTitle">
+      <div class="subpage-hero"><div class="container"><button class="back-link" data-route="inicio">← Voltar ao início</button><span class="eyebrow">Consulta</span><h1 id="etapasTitle">Consultar por etapa da obra</h1><p>Selecione uma etapa ou atividade para visualizar os resíduos potencialmente associados.</p></div></div>
+      <div class="container content-card"><div class="status-note"><strong>Base provisória.</strong> Os registros serão substituídos pela matriz consolidada do item 5.1.</div><div id="stageGrid" class="stage-grid"></div><div id="stageResults" class="results-panel hidden" aria-live="polite"></div></div>
     </section>
 
-    <section class="page" data-page="ficha">
-      <div class="container page-header">
-        <button class="back-link" id="backFromSheet">← Voltar</button>
-        <span class="eyebrow">Ficha do resíduo</span>
-      </div>
+    <section class="page" data-page="residuos" aria-labelledby="residuosTitle">
+      <div class="subpage-hero"><div class="container"><button class="back-link" data-route="inicio">← Voltar ao início</button><span class="eyebrow">Consulta</span><h1 id="residuosTitle">Consultar por tipo de resíduo</h1><p>Pesquise diretamente um material ou navegue pelos registros cadastrados.</p></div></div>
+      <div class="container content-card"><label class="search-box" for="residueSearch"><span>Pesquisar resíduo</span><div><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="residueSearch" type="search" placeholder="Ex.: concreto, madeira, plástico..." autocomplete="off"></div></label><div id="residueList" class="residue-list" aria-live="polite"></div></div>
+    </section>
+
+    <section class="page" data-page="ficha" aria-labelledby="fichaHeading">
+      <div class="subpage-hero compact"><div class="container"><button class="back-link" id="backFromSheet">← Voltar</button><span class="eyebrow">Ficha do resíduo</span><h1 id="fichaHeading">Informações do resíduo</h1></div></div>
       <article id="residueSheet" class="container residue-sheet"></article>
     </section>
 
-    <section class="page" data-page="sobre">
-      <div class="container text-page">
-        <button class="back-link" data-route="inicio">← Voltar ao início</button>
-        <h1>Sobre a ferramenta</h1>
-        <p>Esta ferramenta foi desenvolvida como produto acadêmico para organizar informações relacionadas ao gerenciamento de resíduos da construção civil em obras no município de Viçosa/MG. A Praça do Laranjal é utilizada como primeira aplicação da estrutura.</p>
-        <p>O conteúdo será ampliado à medida que a base técnica do projeto for consolidada.</p>
-      </div>
+    <section class="page" data-page="sobre" aria-labelledby="sobreTitle">
+      <div class="subpage-hero"><div class="container"><button class="back-link" data-route="inicio">← Voltar ao início</button><span class="eyebrow">Projeto</span><h1 id="sobreTitle">Sobre a ferramenta</h1><p>Conheça a proposta acadêmica, a aplicação-piloto e a forma como a ferramenta foi desenvolvida.</p></div></div>
+      <div class="container content-card prose"><h2>Por que a ferramenta foi criada?</h2><p>Esta página será finalizada com o texto do projeto. Por enquanto, registra-se que a ferramenta foi concebida para organizar e tornar consultáveis informações sobre o gerenciamento de RCC em Viçosa/MG.</p><h2>Aplicação-piloto</h2><p>A Praça do Laranjal foi adotada como aplicação inicial da estrutura. As informações serão atualizadas à medida que a base técnica for consolidada.</p><h2>Desenvolvimento</h2><p>A interface e a programação foram desenvolvidas com apoio de inteligência artificial generativa, a partir dos requisitos, decisões e validações realizadas pela equipe.</p></div>
     </section>
 
-    <section class="page" data-page="como-usar">
-      <div class="container text-page">
-        <button class="back-link" data-route="inicio">← Voltar ao início</button>
-        <h1>Como usar</h1>
-        <ol class="steps">
-          <li>Escolha consultar por etapa da obra ou por tipo de resíduo.</li>
-          <li>Selecione a etapa ou pesquise o resíduo desejado.</li>
-          <li>Acesse a ficha única do resíduo.</li>
-          <li>Consulte classificação, manejo, destinação, fontes e status da informação.</li>
-        </ol>
-      </div>
+    <section class="page" data-page="como-usar" aria-labelledby="comoTitle">
+      <div class="subpage-hero"><div class="container"><button class="back-link" data-route="inicio">← Voltar ao início</button><span class="eyebrow">Orientação</span><h1 id="comoTitle">Como usar</h1><p>O acesso foi organizado para permitir consultas por etapa da obra ou diretamente pelo tipo de resíduo.</p></div></div>
+      <div class="container content-card"><ol class="steps"><li><span>1</span><div><strong>Escolha a forma de consulta.</strong><p>Você pode começar por uma etapa da obra ou pesquisar diretamente um resíduo.</p></div></li><li><span>2</span><div><strong>Selecione o item desejado.</strong><p>Na consulta por etapa, veja os resíduos relacionados. Na consulta por resíduo, use a busca.</p></div></li><li><span>3</span><div><strong>Acesse a ficha única.</strong><p>A ficha reúne classificação, procedimentos de gerenciamento, destinação, fontes e situação da informação.</p></div></li></ol></div>
     </section>
 
-    <section class="page" data-page="referencias">
-      <div class="container text-page">
-        <button class="back-link" data-route="inicio">← Voltar ao início</button>
-        <h1>Referências</h1>
-        <p>As referências técnicas, legais e bibliográficas serão vinculadas aos registros da base consolidada. Nesta versão de demonstração, são exibidas apenas referências ilustrativas já utilizadas no projeto.</p>
-        <ul class="reference-list">
-          <li>Resolução CONAMA nº 307/2002 e alterações.</li>
-          <li>Lei Federal nº 12.305/2010 — Política Nacional de Resíduos Sólidos.</li>
-          <li>Normas técnicas da ABNT aplicáveis ao gerenciamento e à classificação dos resíduos.</li>
-          <li>Normas e informações oficiais aplicáveis ao município de Viçosa/MG e ao Estado de Minas Gerais.</li>
-        </ul>
-      </div>
+    <section class="page" data-page="referencias" aria-labelledby="refsTitle">
+      <div class="subpage-hero"><div class="container"><button class="back-link" data-route="inicio">← Voltar ao início</button><span class="eyebrow">Base técnica</span><h1 id="refsTitle">Referências</h1><p>Fontes legais, técnicas e bibliográficas utilizadas na organização das informações.</p></div></div>
+      <div class="container content-card prose"><div class="status-note"><strong>Lista em atualização.</strong> As referências serão vinculadas aos registros da base consolidada.</div><ul class="reference-list"><li>Resolução CONAMA nº 307/2002 e alterações.</li><li>Lei Federal nº 12.305/2010 — Política Nacional de Resíduos Sólidos.</li><li>Normas técnicas da ABNT aplicáveis à classificação e ao gerenciamento dos resíduos.</li><li>Normas e informações oficiais aplicáveis ao município de Viçosa/MG e ao Estado de Minas Gerais.</li></ul></div>
     </section>
 
-    <section class="page" data-page="contato">
-      <div class="container text-page">
-        <button class="back-link" data-route="inicio">← Voltar ao início</button>
-        <h1>Contato</h1>
-        <p>Projeto acadêmico desenvolvido na disciplina EXT009 — Tratamento e Gerenciamento de Resíduos Sólidos.</p>
-        <p><strong>Equipe:</strong> Ana Paula Dutra Machado, Lisandra Oliveira Vieira e Ricky Alves Costa Andrade.</p>
-      </div>
+    <section class="page" data-page="contato" aria-labelledby="contatoTitle">
+      <div class="subpage-hero"><div class="container"><button class="back-link" data-route="inicio">← Voltar ao início</button><span class="eyebrow">Projeto acadêmico</span><h1 id="contatoTitle">Contato</h1><p>Informações institucionais e identificação da equipe responsável pelo projeto.</p></div></div>
+      <div class="container content-card prose"><p><strong>Disciplina:</strong> EXT009 — Tratamento e Gerenciamento de Resíduos Sólidos.</p><p><strong>Equipe:</strong> Ana Paula Dutra Machado, Lisandra Oliveira Vieira e Ricky Alves Costa Andrade.</p><p><strong>Instituição:</strong> Centro Universitário de Viçosa — UniViçosa.</p></div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-grid">
-      <span>Projeto acadêmico • Viçosa/MG</span>
-      <span id="dataStatus">Carregando base de dados...</span>
-    </div>
+    <div class="container-wide footer-grid"><span>Projeto acadêmico • Viçosa/MG</span><span id="dataStatus">Carregando base de dados...</span></div>
   </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <script src="data-fallback.js"></script>
   <script src="app.js"></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      if (window.VLibras && window.VLibras.Widget) {
+        try {
+          new window.VLibras.Widget({
+            rootPath: 'https://vlibras.gov.br/app',
+            personalization: 'https://vlibras.gov.br/config/default_logo.json',
+            avatar: 'random',
+            position: 'L'
+          });
+        } catch (e) { /* O site continua funcional mesmo se o serviço externo estiver indisponível. */ }
+      }
+    });
+  </script>
 </body>
 </html>

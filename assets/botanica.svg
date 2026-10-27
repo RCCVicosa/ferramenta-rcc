@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Folhagem decorativa</title>
+  <desc id="desc">Ilustração vetorial abstrata de folhas verdes sobre fundo transparente.</desc>
+  <defs>
+    <linearGradient id="leaf1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#355d3e"/><stop offset="1" stop-color="#163f2b"/></linearGradient>
+    <linearGradient id="leaf2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6d8b5e"/><stop offset="1" stop-color="#2e5b3a"/></linearGradient>
+    <linearGradient id="leaf3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#91a97a"/><stop offset="1" stop-color="#426a49"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#173522" flood-opacity=".16"/></filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M140 1180 C145 900 170 630 245 340" fill="none" stroke="#294e36" stroke-width="12" stroke-linecap="round"/>
+    <path d="M245 340 C165 280 95 250 20 270 C55 365 130 415 226 397 Z" fill="url(#leaf2)"/>
+    <path d="M232 420 C330 320 410 292 510 318 C467 424 370 472 248 466 Z" fill="url(#leaf1)"/>
+    <path d="M208 555 C115 480 48 470 0 492 C28 585 104 642 202 623 Z" fill="url(#leaf3)"/>
+    <path d="M205 650 C310 570 390 556 500 585 C444 685 339 726 212 702 Z" fill="url(#leaf2)"/>
+    <path d="M180 795 C95 718 35 704 0 718 C25 812 87 862 170 858 Z" fill="url(#leaf1)"/>
+    <path d="M176 885 C270 806 358 796 442 826 C393 918 302 954 184 932 Z" fill="url(#leaf3)"/>
+    <path d="M145 1010 C84 949 35 934 0 944 C16 1018 66 1064 136 1068 Z" fill="url(#leaf2)"/>
+  </g>
+  <g opacity=".22">
+    <ellipse cx="590" cy="180" rx="180" ry="58" fill="#9bad82" transform="rotate(-24 590 180)"/>
+    <ellipse cx="700" cy="330" rx="190" ry="62" fill="#66815e" transform="rotate(20 700 330)"/>
+  </g>
+</svg>

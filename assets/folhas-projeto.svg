@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" role="img" aria-labelledby="title desc">
+<title id="title">Composição botânica abstrata</title><desc id="desc">Folhas vetoriais verdes em composição decorativa.</desc>
+<defs>
+  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8ca377"/><stop offset="1" stop-color="#476b4b"/></linearGradient>
+  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#365f40"/><stop offset="1" stop-color="#143b29"/></linearGradient>
+</defs>
+<rect width="560" height="420" rx="42" fill="#f1e5ce"/>
+<circle cx="416" cy="108" r="104" fill="#e3d2b3"/>
+<path d="M76 360 C115 246 164 160 264 68" stroke="#274d34" stroke-width="8" fill="none" stroke-linecap="round"/>
+<path d="M194 130 C135 92 78 96 38 125 C70 193 132 212 190 185 Z" fill="url(#g1)"/>
+<path d="M224 98 C278 58 331 58 377 82 C350 147 295 173 238 150 Z" fill="url(#g2)"/>
+<path d="M155 222 C104 186 62 189 28 211 C54 265 105 285 150 267 Z" fill="url(#g2)"/>
+<path d="M181 201 C236 163 292 167 334 194 C305 254 251 272 192 252 Z" fill="url(#g1)"/>
+<path d="M108 317 C73 293 42 295 18 310 C37 351 70 365 102 351 Z" fill="url(#g1)"/>
+<path d="M129 300 C171 270 211 274 244 294 C222 336 180 350 137 335 Z" fill="url(#g2)"/>
+</svg>
